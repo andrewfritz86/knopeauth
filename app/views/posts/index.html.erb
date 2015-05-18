@@ -1,0 +1,22 @@
+
+<h1> Add a New Entry </h1>
+<form action="/posts" method="POST">
+  Title
+  <input type="text" name="title">
+  </br>
+  Contents
+  <input type="text" size="200" name="contents">
+  <input name="authenticity_token" type="hidden" value="token_value">
+  <input type="submit">
+</form>
+
+<h3> Here come the posts </h3>
+<ul>
+  <% @posts.each do |post| %>
+    <li> 
+      <h3> <%= post.username %> sez: </h3>
+      <h4> <%= post.title %> </h4>
+      <p> <%= post.contents %> </p>
+    </li>
+  <% end %>
+</ul>

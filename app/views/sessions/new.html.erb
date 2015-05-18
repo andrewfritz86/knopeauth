@@ -1,0 +1,16 @@
+<% if @message %>
+  <%= @message %>
+<% end %>
+
+
+<%= form_tag "/sessions" do %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  
+  <%= submit_tag "Log in!" %>
+<% end %>
+
+<h1> No Account? Sign up! </h1>
+<a href="/signup">sign up here </a>
